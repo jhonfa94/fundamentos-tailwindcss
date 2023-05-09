@@ -52,17 +52,17 @@
             </svg>
           </button>
           <div class="ml-8 hidden space-x-8 md:flex">
-            <a class="px-3 py-2 text-sky-500" href="/">Home</a>
+            <a
+              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
+              href="/"
+              >Home</a
+            >
             <a
               class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
               href="/about.html"
               >About</a
             >
-            <a
-              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
-              href="/blog.html"
-              >Blog</a
-            >
+            <a class="px-3 py-2 text-sky-500" href="/blog.html">Blog</a>
             <a
               class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
               href="/contact.html"
@@ -103,7 +103,9 @@
         </div>
       </div>
       <div class="hidden space-y-1 border-t pb-3 pt-2 md:hidden">
-        <a href="/" class="block rounded-md bg-sky-500 px-3 py-2 text-white"
+        <a
+          href="/"
+          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white"
           >Home</a
         >
         <a
@@ -113,7 +115,7 @@
         >
         <a
           href="/blog.html"
-          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white"
+          class="block rounded-md bg-sky-500 px-3 py-2 text-white"
           >Blog</a
         >
         <a
@@ -125,243 +127,65 @@
     </header>
 
     <main class="flex-1 p-4">
-      <div
-        class="mx-auto mt-4 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3"
-      >
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-1.jpg"
-                alt="Desarrollo de una API con Laravel siguiendo la especificación JSON:API"
-              />
-            </a>
+      <article class="mx-auto flex max-w-4xl flex-col">
+        <div class="h-52 md:h-72 lg:h-96">
+          <img
+            class="h-full w-full rounded object-cover object-center"
+            src="/img/article-1.jpg"
+            alt="Desarrollo de una API con Laravel siguiendo la especificación JSON:API"
+          />
+        </div>
+        <div class="flex-1 space-y-3 pt-4 md:text-center">
+          <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
+          <h2
+            class="text-xl font-semibold leading-tight text-slate-800 md:text-4xl"
+          >
+            Desarrollo de una API con Laravel siguiendo la especificación
+            JSON:API
+          </h2>
+        </div>
+        <div class="flex space-x-2 pt-4 md:mx-auto">
+          <img
+            src="https://ui-avatars.com/api?name=Jhon Fabio"
+            alt="autor"
+            class="h-10 w-10 rounded-full"
+          />
+          <div class="flex flex-col justify-center">
+            <span class="font-sme text-sm leading-4 text-slate-600"
+              >Jhon Fabio Cardona</span
+            >
+            <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
           </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline">
-                Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API
-              </a>
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus.
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-2.jpg"
-                alt="Desarrollo de una API con Laravel siguiendo la especificaciónJSON:API"
-              />
-            </a>
-          </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline"
-                >Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API</a
-              >
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus, laborum non nesciunt laudantium voluptate
-              sequi necessitatibus delectus facilis ullam?
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-3.jpg"
-                alt="Desarrollo de una API con Laravel siguiendo la especificación JSON:API"
-              />
-            </a>
-          </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline">
-                Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API
-              </a>
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus, laborum non nesciunt laudantium voluptate
-              sequi necessitatibus delectus facilis ullam?
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-4.jpg"
-                alt="Desarrollo de una API con Laravel siguiendo la especificación JSON:API"
-              />
-            </a>
-          </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline">
-                Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API
-              </a>
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus, laborum non nesciunt laudantium voluptate
-              sequi necessitatibus delectus facilis ullam?
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-5.jpg"
-                alt="Desarrollo de una API con Laravel siguiendo la especificación JSON:API"
-              />
-            </a>
-          </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline">
-                Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API
-              </a>
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus, laborum non nesciunt laudantium voluptate
-              sequi necessitatibus delectus facilis ullam?
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
-        <article class="flex flex-col overflow-hidden rounded bg-white shadow">
-          <div class="h-52">
-            <a href="/article.html" class="duration-300 hover:opacity-75">
-              <img
-                class="h-full w-full object-cover object-center"
-                src="/img/article-6.jpg"
-                alt="Desarrollo de una API con Laravel
-              siguiendo la especificación JSON:API"
-              />
-            </a>
-          </div>
-          <div class="flex-1 space-y-3 p-5">
-            <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
-            <h2 class="text-xl font-semibold leading-tight text-slate-800">
-              <a href="/article.html" class="hover:underline"
-                >Desarrollo de una API con Laravel siguiendo la especificación
-                JSON:API</a
-              >
-            </h2>
-            <p class="hidden text-justify text-slate-500 md:block">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-              libero cum reprehenderit veniam minima animi quidem commodi
-              deleniti error possimus, laborum non nesciunt laudantium voluptate
-              sequi necessitatibus delectus facilis ullam?
-            </p>
-          </div>
-          <div class="flex space-x-2 p-5">
-            <img
-              src="https://ui-avatars.com/api?name=Jhon Fabio"
-              alt="autor"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-sme text-sm leading-4 text-slate-600"
-                >Jhon Fabio Cardona</span
-              >
-              <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
+      <div class="prose prose-slate mx-auto mt-6 lg:prose-xl">
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+          delectus expedita nemo perspiciatis quae omnis hic unde, pariatur
+          corporis recusandae at fugit enim libero, dolor ex quasi asperiores
+          quidem cupiditate.
+        </p>
+        <ol>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 4</li>
+        </ol>
+        <pre>
+            <code>class User{}  </code>   
+        </pre>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, minima
+          commodi officiis cum earum illo praesentium odio fugiat, odit
+          veritatis nesciunt reprehenderit? Sequi saepe quam enim placeat in
+          <code>php artisan serve</code>
+          deserunt consequuntur.
+        </p>
       </div>
     </main>
 

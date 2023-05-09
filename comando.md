@@ -9,3 +9,5 @@ Ejecutar prettier
 npx prettier --write index.html
 
 npm install prettier-plugin-tailwindcss -D
+
+https://simpleicons.org/

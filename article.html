@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,12 +9,12 @@
     <!-- <link href="./styles.css" rel="stylesheet" /> -->
     <link href="./tailwind.css" rel="stylesheet" />
   </head>
-  <body class="flex h-screen flex-col bg-slate-300">
-    <header class="bg-white px-6 shadow">
+  <body class="flex h-screen flex-col bg-slate-200 dark:bg-slate-950">
+    <header class="bg-white px-6 shadow dark:bg-slate-900">
       <div class="mx-auto flex h-16 max-w-6xl items-center justify-between">
         <button
           type="button"
-          class="-ml-1 rounded p-1 text-slate-500 transition-colors hover:bg-sky-500 hover:text-slate-100 focus:ring-2 focus:ring-slate-200"
+          class="-ml-1 rounded p-1 text-slate-500 transition-colors hover:bg-sky-500 hover:text-slate-100 focus:ring-2 focus:ring-slate-200 dark:text-slate-400 dark:hover:text-slate-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,29 +51,32 @@
               />
             </svg>
           </button>
+          <!-- NAVEGACION DE ESCRITORIO -->
           <div class="ml-8 hidden space-x-8 md:flex">
             <a
-              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
+              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500 dark:text-slate-400 dark:hover:text-sky-500"
               href="/"
               >Home</a
             >
             <a
-              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
+              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500 dark:text-slate-400 dark:hover:text-sky-500"
               href="/about.html"
               >About</a
             >
             <a class="px-3 py-2 text-sky-500" href="/blog.html">Blog</a>
             <a
-              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500"
+              class="px-3 py-2 text-slate-600 transition-colors hover:text-sky-500 dark:text-slate-400 dark:hover:text-sky-500"
               href="/contact.html"
               >Contacto</a
             >
           </div>
         </div>
+
+        <!-- BOTONES -->
         <div class="flex">
           <button
             type="button"
-            class="-ml-1 mr-4 rounded-full p-1 text-slate-500 transition-colors hover:text-sky-500 focus:ring-2 focus:ring-slate-200 focus:ring-offset-1"
+            class="-ml-1 mr-4 rounded-full p-1 text-slate-500 transition-colors hover:text-sky-500 focus:ring-2 focus:ring-slate-200 focus:ring-offset-1 dark:text-slate-400 dark:hover:text-sky-500"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,15 +105,16 @@
           </button>
         </div>
       </div>
-      <div class="hidden space-y-1 border-t pb-3 pt-2 md:hidden">
+      <!-- NAVEGACION MOVIL -->
+      <div class="space-y-1 border-t pb-3 pt-2 dark:border-slate-500 md:hidden">
         <a
           href="/"
-          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white"
+          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white dark:text-slate-400 dark:hover:text-white"
           >Home</a
         >
         <a
           href="/about.html"
-          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white"
+          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white dark:text-slate-400 dark:hover:text-white"
           >About</a
         >
         <a
@@ -120,7 +124,7 @@
         >
         <a
           href="/contact.html"
-          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white"
+          class="block rounded-md px-3 py-2 text-slate-700 transition-colors hover:bg-sky-500 hover:text-white dark:text-slate-400 dark:hover:text-white"
           >Contacto</a
         >
       </div>
@@ -136,9 +140,11 @@
           />
         </div>
         <div class="flex-1 space-y-3 pt-4 md:text-center">
-          <h3 class="text-sm font-semibold text-sky-500">Laravel</h3>
+          <h3 class="text-sm font-semibold text-sky-500 dark:text-sky-400">
+            Laravel
+          </h3>
           <h2
-            class="text-xl font-semibold leading-tight text-slate-800 md:text-4xl"
+            class="text-xl font-semibold leading-tight text-slate-800 dark:text-slate-200 md:text-4xl"
           >
             Desarrollo de una API con Laravel siguiendo la especificación
             JSON:API
@@ -151,14 +157,17 @@
             class="h-10 w-10 rounded-full"
           />
           <div class="flex flex-col justify-center">
-            <span class="font-sme text-sm leading-4 text-slate-600"
+            <span
+              class="font-sme text-sm leading-4 text-slate-600 dark:text-slate-400"
               >Jhon Fabio Cardona</span
             >
-            <span class="font-sme text-sm text-slate-500">Mayo 9, 2023</span>
+            <span class="font-sme text-sm text-slate-500 dark:text-slate-400"
+              >Mayo 9, 2023</span
+            >
           </div>
         </div>
       </article>
-      <div class="prose prose-slate mx-auto mt-6 lg:prose-xl">
+      <div class="prose prose-slate mx-auto mt-6 dark:prose-invert lg:prose-xl">
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>

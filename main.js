@@ -1,43 +1,79 @@
 const html = document.documentElement;
-const toogleThemeButton = document.getElementById("toogle-dark-mode");
-const sunIcon = document.getElementById("sun-icon");
-const moonIcon = document.getElementById("moon-icon");
 
-// Se accede a las propiedades del systema operativo a traves del navegador para validar las preferencias. 
-const matchMedia = window.matchMedia(
+const icons = {
+    light: document.getElementById("light-icon"),
+    dark: document.getElementById("dark-icon"),
+    system: document.getElementById("system-icon"),
+};
+
+const themeMenu = document.getElementById("theme-menu");
+const themeOptions = document.querySelectorAll(
+    "[data-theme-option]"
+);
+const isDarkMode = window.matchMedia(
     "(prefers-color-scheme: dark)"
-)
+);
 
-const systemDarkMode = matchMedia.matches;
-// console.log('matchMedia: ', matchMedia);
+let currentTheme =
+    localStorage.getItem("theme") ||
+    localStorage.setItem("theme", "system");
 
-/**
- * Funcion para validar el dark mode y replicar las funcionalidades
- * @param {} darkMode boolean
- */
-const updateTheme = (darkMode) => {
-    if (darkMode) {
-        html.classList.add('dark')
-        sunIcon.classList.add('hidden')
-        moonIcon.classList.remove('hidden')
-    } else {
-        html.classList.remove('dark')
-        sunIcon.classList.remove('hidden')
-        moonIcon.classList.add('hidden')
-    }
+updateTheme(currentTheme);
+updateThemeUI(currentTheme);
+
+function updateThemeUI(theme) {
+    Object.entries(icons).forEach(([key, icon]) =>
+        key === theme
+            ? icon.classList.remove("hidden")
+            : icon.classList.add("hidden")
+    );
+
+    themeMenu.classList.add("hidden");
+    localStorage.setItem("theme", theme);
 }
+function updateTheme(theme) {
+    if (
+        theme === "dark" ||
+        (theme === "system" && isDarkMode.matches)
+    ) {
+        html.classList.add("dark");
+    } else if (
+        theme === "light" ||
+        (theme === "system" && !isDarkMode.matches)
+    ) {
+        html.classList.remove("dark");
+    }
+    currentTheme = theme;
+}
+isDarkMode.addEventListener("change", ({ matches }) => {
+    if (currentTheme === "system") {
+        matches
+            ? html.classList.add("dark")
+            : html.classList.remove("dark");
+    }
+});
 
-updateTheme(systemDarkMode)
+themeOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+        const theme = option.dataset.themeOption;
 
-toogleThemeButton.addEventListener('click', (e) => {
-    // toggle dark class
-    html.classList.toggle('dark')
-    sunIcon.classList.toggle('hidden')
-    moonIcon.classList.toggle('hidden')
-})
+        updateThemeUI(theme);
+        updateTheme(theme);
+    });
+});
 
-//Evento que escucha el cambio del tema del systema operativo
-matchMedia.addEventListener('change', ({ matches }) => {
-    // console.log('Event match media: ', matches);
-    updateTheme(matches)
-})
+document
+    .getElementById("toggle-theme-menu")
+    .addEventListener("click", () =>
+        themeMenu.classList.toggle("hidden")
+    );
+
+// const systemDarkMode = matchMedia.matches;
+
+// updateTheme(systemDarkMode);
+
+// toggleThemeButton.addEventListener("click", () => {
+//   html.classList.toggle("dark");
+//   sunIcon.classList.toggle("hidden");
+//   moonIcon.classList.toggle("hidden");
+// });

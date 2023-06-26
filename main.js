@@ -14,9 +14,20 @@ const isDarkMode = window.matchMedia(
     "(prefers-color-scheme: dark)"
 );
 
-let currentTheme =
-    localStorage.getItem("theme") ||
-    localStorage.setItem("theme", "system");
+// let currentTheme =
+//     localStorage.getItem("theme") ||
+//     localStorage.setItem("theme", "system");
+
+let currentTheme = localStorage.getItem("theme");
+// console.log("Current Theme: ", currentTheme);
+if (!currentTheme) {
+    currentTheme = "system";
+    localStorage.setItem("theme", currentTheme);
+}
+
+
+
+
 
 updateTheme(currentTheme);
 updateThemeUI(currentTheme);
